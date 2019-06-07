@@ -8,22 +8,23 @@
 
 // Function that takes in character as argument and checks it against the underlying characters...updating the boolean value ot true if it was guessed
 
-
-
 function Letter(letter) {
     this.letter = letter;
-
-    this.logCharacter = function () {
-
-
+    this.choice = false;
+    this.guess = function (input) {
+        if (input === this.letter) {
+            this.choice === true;
+        }
     }
+    this.letterGuessed = function () {
+        if (this.choice === false) {
+            return "-";
+        }
+        else {
+            return this.letter;
+        };
+    };
 
-}
-
-
-
-
-
-
+};
 
 module.exports = Letter;
